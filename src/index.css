@@ -96,9 +96,19 @@
     @apply transition-all duration-300 ease-out transform hover:-translate-y-1 hover:shadow-lg;
   }
 
+  /* Enhanced Hover Effects */
+  .hover-glow {
+    @apply transition-all duration-500 ease-out hover:shadow-2xl hover:shadow-primary/20;
+  }
+
   /* Glass Morphism */
   .glass {
     @apply backdrop-blur-xl bg-white/10 border border-white/20;
+  }
+
+  /* Enhanced Glass Effect */
+  .glass-card {
+    @apply backdrop-blur-sm bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500;
   }
 
   /* Magnetic Button Effect */
@@ -114,4 +124,27 @@
   .magnetic:hover:before {
     @apply translate-x-full;
   }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent;
+  }
+
+  /* Floating Animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Stagger Animation */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
 }
